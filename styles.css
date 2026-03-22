@@ -121,7 +121,7 @@ p {
     linear-gradient(180deg, #89673b 0%, #cc8c29 25%, #f2b547 56%, #d4ab58 100%);
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 16px;
 }
 
@@ -129,6 +129,11 @@ p {
   width: min(1040px, 100%);
   text-align: center;
   animation: rise 1s ease-out;
+}
+
+.garden-header {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .garden-header h1 {
@@ -354,6 +359,20 @@ p {
   box-shadow: 0 10px 20px rgba(34, 23, 11, 0.25);
 }
 
+@media (max-width: 900px) {
+  .flower-scene {
+    min-height: 560px;
+  }
+
+  .hero-left {
+    left: 10%;
+  }
+
+  .hero-right {
+    left: 46%;
+  }
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -376,8 +395,36 @@ p {
 }
 
 @media (max-width: 700px) {
+  .letter-page {
+    padding: 14px;
+  }
+
+  .letter-card {
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(74, 46, 31, 0.18);
+  }
+
+  .open-gift,
+  .back-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px 18px;
+  }
+
+  .flowers-page {
+    place-items: start center;
+    padding: 10px;
+  }
+
+  .garden-header p {
+    line-height: 1.5;
+    padding: 0 6px;
+  }
+
   .flower-scene {
+    margin-top: 18px;
     min-height: 520px;
+    border-radius: 14px;
   }
 
   .sun {
@@ -393,11 +440,11 @@ p {
   }
 
   .hero-left {
-    left: 4%;
+    left: 2%;
   }
 
   .hero-right {
-    left: 40%;
+    left: 48%;
     width: 250px;
     height: 430px;
   }
@@ -451,5 +498,146 @@ p {
   .hero-right .petal:nth-child(odd) {
     width: 27px;
     height: 78px;
+  }
+}
+
+@media (max-width: 520px) {
+  .letter-wrapper {
+    width: 100%;
+  }
+
+  .envelope-glow {
+    inset: -8px;
+    filter: blur(12px);
+  }
+
+  .letter-card {
+    padding: 18px 14px;
+  }
+
+  .flower-scene {
+    min-height: 470px;
+  }
+
+  .sun {
+    top: 16px;
+    right: 14px;
+    width: 74px;
+    height: 74px;
+  }
+
+  .distant-field {
+    top: 190px;
+    bottom: 92px;
+  }
+
+  .hero-flower {
+    width: 190px;
+    height: 350px;
+  }
+
+  .hero-left {
+    left: -12px;
+  }
+
+  .hero-right {
+    left: calc(50% - 6px);
+    width: 200px;
+    height: 365px;
+  }
+
+  .stem {
+    width: 12px;
+    height: 220px;
+  }
+
+  .hero-right .stem {
+    height: 235px;
+  }
+
+  .leaf {
+    width: 74px;
+    height: 42px;
+    bottom: 58px;
+  }
+
+  .bloom {
+    width: 140px;
+    height: 140px;
+    top: 96px;
+  }
+
+  .hero-right .bloom {
+    width: 152px;
+    height: 152px;
+  }
+
+  .disk {
+    width: 58px;
+    height: 58px;
+  }
+
+  .petal {
+    width: 23px;
+    height: 68px;
+  }
+
+  .petal:nth-child(odd) {
+    width: 20px;
+    height: 60px;
+  }
+
+  .hero-right .petal {
+    width: 25px;
+    height: 72px;
+  }
+
+  .hero-right .petal:nth-child(odd) {
+    width: 22px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 400px) {
+  .letter-page {
+    padding: 10px;
+  }
+
+  .flower-scene {
+    min-height: 430px;
+  }
+
+  .hero-flower {
+    width: 165px;
+    height: 320px;
+  }
+
+  .hero-left {
+    left: -18px;
+  }
+
+  .hero-right {
+    left: calc(50% - 10px);
+    width: 175px;
+    height: 335px;
+  }
+
+  .stem {
+    height: 198px;
+  }
+
+  .hero-right .stem {
+    height: 210px;
+  }
+
+  .bloom {
+    width: 126px;
+    height: 126px;
+    top: 90px;
+  }
+
+  .hero-right .bloom {
+    width: 134px;
+    height: 134px;
   }
 }
